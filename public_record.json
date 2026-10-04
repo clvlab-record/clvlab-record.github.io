@@ -1,1 +1,26 @@
-[]
+[
+ {
+  "id": "1efe62c0d3ca",
+  "published": "2026-10-04T15:57:53Z",
+  "sport": "nfl",
+  "game": "Patriots vs. Bills",
+  "pick": "Patriots",
+  "start": "2026-10-04T17:00:00Z",
+  "entry_price": 0.26,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "status": "pending"
+ },
+ {
+  "id": "13e23d749008",
+  "published": "2026-10-04T15:42:48Z",
+  "sport": "nfl",
+  "game": "Patriots vs. Bills",
+  "pick": "Patriots",
+  "start": "2026-10-04T17:00:00Z",
+  "entry_price": 0.26,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "status": "pending"
+ }
+]
