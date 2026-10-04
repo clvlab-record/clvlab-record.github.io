@@ -1,5 +1,17 @@
 [
  {
+  "id": "052f2c99d34c",
+  "published": "2026-10-04T19:23:04Z",
+  "sport": "nfl",
+  "game": "Chargers vs. Seahawks",
+  "pick": "Chargers",
+  "start": "2026-10-04T20:25:00Z",
+  "entry_price": 0.25,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "status": "pending"
+ },
+ {
   "id": "1efe62c0d3ca",
   "published": "2026-10-04T15:57:53Z",
   "sport": "nfl",
