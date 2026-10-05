@@ -8,8 +8,8 @@
   "start": "2026-10-05T23:00:00Z",
   "entry_price": 0.38,
   "edge_bucket": "5-8%",
-  "clv": null,
-  "status": "pending"
+  "clv": -0.01902,
+  "status": "ok"
  },
  {
   "id": "052f2c99d34c",
