@@ -8,7 +8,9 @@
   "start": "2026-10-05T23:00:00Z",
   "entry_price": 0.38,
   "edge_bucket": "5-8%",
-  "clv": -0.01902,
+  "clv": -0.03645,
+  "clv_basis": "conservative",
+  "repeat": false,
   "status": "ok"
  },
  {
@@ -21,6 +23,8 @@
   "entry_price": 0.25,
   "edge_bucket": "3-5%",
   "clv": 0.05032,
+  "clv_basis": "multiplicative",
+  "repeat": false,
   "status": "ok"
  },
  {
@@ -33,6 +37,8 @@
   "entry_price": 0.26,
   "edge_bucket": "3-5%",
   "clv": 0.04929,
+  "clv_basis": "multiplicative",
+  "repeat": true,
   "status": "ok"
  },
  {
@@ -45,6 +51,8 @@
   "entry_price": 0.26,
   "edge_bucket": "3-5%",
   "clv": 0.04929,
+  "clv_basis": "multiplicative",
+  "repeat": false,
   "status": "ok"
  }
 ]
