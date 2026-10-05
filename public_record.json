@@ -1,5 +1,17 @@
 [
  {
+  "id": "bfba0fa67beb",
+  "published": "2026-10-05T21:32:55Z",
+  "sport": "nba",
+  "game": "Knicks vs. 76ers",
+  "pick": "76ers",
+  "start": "2026-10-05T23:00:00Z",
+  "entry_price": 0.38,
+  "edge_bucket": "5-8%",
+  "clv": null,
+  "status": "pending"
+ },
+ {
   "id": "052f2c99d34c",
   "published": "2026-10-04T19:23:04Z",
   "sport": "nfl",
