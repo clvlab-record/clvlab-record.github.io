@@ -1,32 +1,144 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>CLV LAB — Public Record</title>
+<!doctype html><html lang="en" data-lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#050608">
+<title>CLV LAB — Sports mispricing data</title>
+<meta name="description" content="Polymarket sports mispricing data: every signal recorded, settled by conservative CLV, hash-chained.">
 <style>
-:root{--bg:#fbfaf7;--fg:#1d1d1b;--mut:#6b6a66;--line:#e4e1da;--pos:#1f7a4a;--neg:#b23b2e;--link:#1f5fa8}
-@media (prefers-color-scheme:dark){:root{--bg:#151514;--fg:#ecebe6;--mut:#9a988f;--line:#2c2b28;--pos:#5cc48b;--neg:#ef7b6c;--link:#7fb2f0}}
-body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px;max-width:1000px;margin:auto}
-h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:28px 0 2px}.mut{color:var(--mut)}
-.kpi{display:flex;gap:28px;margin:20px 0;flex-wrap:wrap}.kpi b{display:block;font-size:24px}
-.wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}
-td,th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
-th{color:var(--mut);font-weight:500}.n{text-align:right;font-variant-numeric:tabular-nums}
-.pos{color:var(--pos)}.neg{color:var(--neg)}tr.rep td{opacity:.6}a{color:var(--link)}.sm{font-size:12px}
+:root{--bg:#050608;--bg2:#0a0c10;--card:rgba(255,255,255,.035);--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+--fg:#f2efe8;--dim:#8a8f98;--acc:#f5a524;--cy:#45d0e0;--neg:#ff7a66;--pos:#58c98c;
+--sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI","PingFang SC","Hiragino Sans GB","Noto Sans SC",sans-serif;
+--mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-snap-type:y proximity;background:var(--bg)}
+body{margin:0;color:var(--fg);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;
+background:radial-gradient(1200px 600px at 80% -10%,rgba(245,165,36,.07),transparent 60%),var(--bg)}
+html[data-lang=en] .zh,html[data-lang=zh] .en{display:none!important}
+a{color:inherit;text-decoration:none}.mono{font-family:var(--mono)}.dim{color:var(--dim)}.acc{color:var(--acc)}.cy{color:var(--cy)}
+.neg{color:var(--neg)}.pos{color:var(--pos)}.row{display:flex;gap:12px;align-items:center}.between{justify-content:space-between}
+header{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;
+background:rgba(5,6,8,.62);backdrop-filter:saturate(140%) blur(16px);-webkit-backdrop-filter:saturate(140%) blur(16px);border-bottom:1px solid var(--line)}
+.logo{font:600 19px/1 var(--mono);letter-spacing:.16em}.logo b{color:var(--acc);font-weight:600}
+.btn{display:inline-flex;gap:10px;align-items:center;justify-content:center;background:var(--acc);color:#141007;font-weight:650;
+padding:13px 24px;border-radius:999px;box-shadow:0 8px 28px -10px rgba(245,165,36,.55);transition:transform .2s}
+.btn:active{transform:scale(.98)}.btn.sm{padding:9px 16px;font-size:14px}.btn.ghost{background:none;color:var(--fg);border:1px solid var(--line2);box-shadow:none}
+.lang{background:none;border:1px solid var(--line2);color:var(--dim);padding:7px 11px;border-radius:999px;margin-right:8px;cursor:pointer;font:600 12px var(--mono)}
+.screen{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;scroll-snap-align:start;
+padding:96px 24px 56px;position:relative;border-bottom:1px solid var(--line)}
+.inner{width:100%;max-width:920px;margin:0 auto}
+.idx{display:flex;gap:14px;align-items:center;font:500 12px var(--mono);letter-spacing:.3em;color:var(--dim);text-transform:uppercase;margin-bottom:18px}
+.idx b{color:var(--acc);font-weight:500}.idx:after{content:"";flex:1;height:1px;background:var(--line)}
+h1{font-size:clamp(38px,9vw,72px);line-height:1.08;letter-spacing:-.02em;margin:18px 0 20px;font-weight:700}
+h1 em,h2 em{font-style:normal;color:var(--acc)}h2{font-size:clamp(28px,6.4vw,44px);line-height:1.15;letter-spacing:-.01em;margin:0 0 14px;font-weight:700}
+h3{font-size:20px;margin:14px 0;font-weight:650}.lead{color:var(--dim);font-size:17px;max-width:640px}.lead b{color:var(--fg);font-weight:600}
+.tag{display:inline-flex;gap:8px;align-items:center;font:500 12px var(--mono);letter-spacing:.32em;color:var(--acc)}
+.tag:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px var(--acc)}
+.meta{font:500 12px var(--mono);letter-spacing:.18em;color:var(--dim);margin-top:26px;line-height:2}
+.ticker{position:absolute;left:0;right:0;bottom:0;overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);
+padding:15px 0;font:13px var(--mono);color:var(--dim);background:rgba(255,255,255,.015)}
+.ticker .track{display:inline-block;animation:scroll 70s linear infinite}.ticker.still{padding-left:24px}.tk{margin:0 16px}.tk b{color:var(--fg);font-weight:600}.dia{color:var(--acc);font-size:9px}
+.tlabel{position:absolute;left:24px;bottom:58px;font:500 11px var(--mono);letter-spacing:.3em;color:var(--dim)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.kpis{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:8px 0 18px}
+.kpis>div{padding:22px;border:1px solid var(--line);margin:-1px 0 0 -1px}.kpis small{color:var(--dim);font-size:13px}
+.kpis b{display:block;font:600 clamp(32px,8vw,46px)/1.15 var(--mono);color:var(--acc);font-variant-numeric:tabular-nums;margin-top:4px}
+.note{color:var(--dim);font-size:13px;line-height:1.7}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.cases{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;margin:6px -24px 14px;padding-left:24px;padding-right:24px;scrollbar-width:none}
+.cases::-webkit-scrollbar{display:none}.case{flex:0 0 min(86%,420px);scroll-snap-align:start}
+.badge{border:1px solid rgba(245,165,36,.5);color:var(--acc);padding:3px 10px;border-radius:999px;font-size:12px}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-radius:12px;overflow:hidden}
+.kv>div{background:var(--bg2);padding:14px 16px}.kv small{display:block;color:var(--dim);font-size:12px;letter-spacing:.06em}.kv b{font-size:19px;font-weight:600}
+.link{display:block;color:var(--dim);font-size:14px;padding:14px 0;border-top:1px solid var(--line)}
+.mech{display:grid;gap:12px}.mech .card{padding:18px 22px}.mech h3{margin:6px 0 4px;font-size:18px}.mech p{margin:0;color:var(--dim);font-size:15px}
+.mech .n{font:500 11px var(--mono);letter-spacing:.3em;color:var(--cy)}
+.chart{width:100%;height:auto;margin:6px 0 8px}.chart .sharp{stroke:var(--acc);stroke-width:2}.chart .mkt{fill:none;stroke:var(--cy);stroke-width:2.5;stroke-linejoin:round}
+.chart .dot{fill:var(--bg);stroke:var(--cy);stroke-width:2}.chart .start{stroke:var(--dim)}.chart .tx{fill:var(--dim);font:12px var(--mono)}.chart .acc{fill:var(--acc)}.chart .cy{fill:var(--cy)}
+.legend{display:grid;gap:6px;font-size:14px;color:var(--dim)}.legend i{display:inline-block;width:18px;height:2px;vertical-align:middle;margin-right:10px}
+.quote{font-size:clamp(22px,5.4vw,32px);line-height:1.45;font-weight:600;margin:6px 0 18px}.quote em{font-style:normal;color:var(--acc)}
+.fields{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--line);border-radius:14px;overflow:hidden;margin:6px 0 16px}
+.fields div{background:var(--bg2);padding:13px 8px;text-align:center;font-size:14px}.fields .wide{grid-column:1/-1;font-family:var(--mono)}
+.chain{font:12px var(--mono);color:var(--dim);word-break:break-all;margin:10px 0 18px}
+.steps{border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.step{display:grid;grid-template-columns:46px 1fr;gap:6px;padding:15px 18px;border-top:1px solid var(--line)}.step:first-child{border-top:0}
+.step .num{font:500 14px var(--mono);color:var(--acc);padding-top:2px}.step b{font-size:16px}.step code{font:500 10px var(--mono);letter-spacing:.25em;color:var(--dim);margin-left:8px}
+.step p{margin:2px 0 0;color:var(--dim);font-size:14px;line-height:1.55}
+.center{text-align:center}.center .lead{margin:0 auto 22px}.banner{display:inline-block;margin-top:22px;border:1px solid rgba(245,165,36,.45);color:var(--acc);
+padding:10px 18px;border-radius:999px;font:500 12px var(--mono);letter-spacing:.2em}
+details{border-top:1px solid var(--line)}details:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:18px 0;display:flex;gap:16px;align-items:center;font-weight:600}summary::-webkit-details-marker{display:none}
+.plus{margin-left:auto;color:var(--acc);font-size:22px;transition:transform .25s}details[open] .plus{transform:rotate(45deg)}
+details p{margin:0 0 18px 40px;color:var(--dim);font-size:15px}code{font-family:var(--mono);color:var(--fg);font-size:.92em}
+footer{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;color:var(--dim);font-size:14px}
+footer .nfa{width:100%;font:500 11px var(--mono);letter-spacing:.3em;margin-top:6px}
+.dots{position:fixed;right:12px;top:50%;transform:translateY(-50%);z-index:15;display:grid;gap:10px}
+.dots a{width:6px;height:6px;border-radius:50%;background:var(--line2);transition:all .25s}.dots a.on{background:var(--acc);height:18px;border-radius:3px}
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}.js .reveal.in{opacity:1;transform:none}
+@media (max-width:760px){html{scroll-snap-type:y mandatory}.screen{padding:84px 22px 44px}h1{margin-top:14px}
+.lead{font-size:16px}.kpis>div{padding:18px}.dots{right:6px}}
+@media (max-width:760px) and (max-height:800px){.screen{padding:72px 20px 34px}h2{font-size:28px;margin-bottom:10px}.idx{margin-bottom:12px}
+.lead{font-size:15px}.card{padding:16px 18px}.mech{gap:8px}.mech .card{padding:13px 16px}.mech h3{font-size:16px;margin:2px 0}.mech p{font-size:14px;line-height:1.5}
+.kv>div{padding:10px 12px}.kv b{font-size:17px}.case h3{margin:10px 0}.step{padding:11px 14px}.step p{font-size:13px;line-height:1.45}.step b{font-size:15px}
+.kpis>div{padding:14px 16px}.kpis b{font-size:30px}h1{font-size:36px}.quote{font-size:21px}.fields div{padding:10px 6px;font-size:13px}}
+@media (max-width:760px) and (max-height:690px){.screen{padding:64px 18px 26px}h2{font-size:24px}.cases+.link{padding:10px 0}.swipe{display:none}
+.mech p{font-size:13px}.step{padding:9px 12px}.step p{font-size:12.5px}.lead{margin:6px 0}.chart{margin:0}}
+@media (min-width:761px){.mech{grid-template-columns:repeat(3,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker .track{animation:none}.js .reveal{opacity:1;transform:none;transition:none}}
 </style></head><body>
-<h1>CLV LAB — Public Record</h1>
-<p class=mut>Every published signal, unedited. CLV = sharp closing no-vig price vs published entry price,
-de-vigged conservatively (the lower of multiplicative and Shin, so longshots are not flattered).
-Data as of 2026-10-05 23:00 UTC / 10-06 07:00 HKT.</p>
-<p>Record since <b>2026-10-05 00:00 UTC / 10-05 08:00 HKT</b>.</p>
-<div class=kpi><div><span class=mut>Picks</span><b>1</b></div>
-<div><span class=mut>Settled</span><b>1</b></div>
-<div><span class=mut>Avg CLV</span><b>-3.65%</b></div>
-<div><span class=mut>CLV &gt; 0</span><b>0%</b></div></div>
-<h2>Next 24h on watch</h2><p class=mut>Games we are scanning for mispricings; a pick is posted only if one clears the edge bar. Updated hourly.</p><div class=wrap><table><thead><tr><th>League</th><th>Game</th><th>Start (UTC / HKT)</th></tr></thead><tbody><tr><td>NBA</td><td>Nets vs. Hornets</td><td>10-06 23:00 UTC / 10-07 07:00 HKT</td></tr><tr><td>NBA</td><td>Pelicans vs. Thunder</td><td>10-07 00:00 UTC / 10-07 08:00 HKT</td></tr><tr><td>CFB</td><td>Southern Miss vs. Troy</td><td>10-07 00:00 UTC / 10-07 08:00 HKT</td></tr><tr><td>NBA</td><td>Nuggets vs. Jazz</td><td>10-07 01:00 UTC / 10-07 09:00 HKT</td></tr><tr><td>NBA</td><td>Lakers vs. Warriors</td><td>10-07 02:00 UTC / 10-07 10:00 HKT</td></tr></tbody></table></div>
-<h2>Record</h2>
-<div class=wrap><table><thead><tr><th>Published (UTC / HKT)</th><th>League</th><th>Game</th><th>Pick</th><th class=n>Entry</th><th>Edge</th><th class=n>CLV</th></tr></thead><tbody><tr><td>2026-10-05 21:32<br><span class='mut sm'>10-06 05:32 HKT</span></td><td>NBA</td><td>Knicks vs. 76ers</td><td><b>76ers</b></td><td class=n>0.38</td><td>5-8%</td><td class='n neg'>-3.6%</td></tr></tbody></table></div>
-<h2>Calibration period (before 2026-10-05 00:00 UTC / 10-05 08:00 HKT)</h2><p class=mut>Published while the pricing rules were being set; kept here and in the hash chain, not counted above.</p><div class=wrap><table><thead><tr><th>Published (UTC / HKT)</th><th>League</th><th>Game</th><th>Pick</th><th class=n>Entry</th><th>Edge</th><th class=n>CLV</th></tr></thead><tbody><tr><td>2026-10-04 19:23<br><span class='mut sm'>10-05 03:23 HKT</span></td><td>NFL</td><td>Chargers vs. Seahawks</td><td><b>Chargers</b></td><td class=n>0.25</td><td>3-5%</td><td class='n pos'>+5.0%†</td></tr><tr class=rep><td>2026-10-04 15:57<br><span class='mut sm'>10-04 23:57 HKT</span></td><td>NFL</td><td>Patriots vs. Bills</td><td><b>Patriots</b> <span class=mut>(repeat)</span></td><td class=n>0.26</td><td>3-5%</td><td class='n pos'>+4.9%†</td></tr><tr><td>2026-10-04 15:42<br><span class='mut sm'>10-04 23:42 HKT</span></td><td>NFL</td><td>Patriots vs. Bills</td><td><b>Patriots</b></td><td class=n>0.26</td><td>3-5%</td><td class='n pos'>+4.9%†</td></tr></tbody></table></div>
-<p class=mut style="font-size:13px">Times in UTC, then Hong Kong (HKT, UTC+8).<br>† Settled before 2026-10-05, when only the multiplicative close was recorded; shown as recorded and excluded from the averages above.<br>(repeat) The same pick signalled again while the mispricing lasted; listed because every record stays public, counted once in the averages.</p>
-<p class=mut style="margin-top:20px;word-break:break-all">Tamper-evident: every record is hash-chained.
-Chain head <code>26e667a7deec947c23ce254dde212fc93c024a4170f8f6ebd95c562720bf61a0</code>. Verify: download
-<a href="public_chain.jsonl">public_chain.jsonl</a> and <a href="chain.py">chain.py</a>, run
-<code>python chain.py public_chain.jsonl</code>. Each channel message carries the first 12 characters of its record's hash.</p>
-</body></html>
+<header><span class="logo">CLV<b>Lab</b></span><div class="row"><button class="lang" id="lang" type="button">中文</button>
+<a class="btn sm" href="https://t.me/clvlab">Telegram →</a></div></header>
+<nav class="dots" aria-label="sections"><a href="#s1" aria-label="1"></a><a href="#s2" aria-label="2"></a><a href="#s3" aria-label="3"></a><a href="#s4" aria-label="4"></a><a href="#s5" aria-label="5"></a><a href="#s6" aria-label="6"></a><a href="#s7" aria-label="7"></a><a href="#s8" aria-label="8"></a><a href="#s9" aria-label="9"></a><a href="#s10" aria-label="10"></a></nav>
+<section class="screen" id="s1"><div class="inner reveal"><span class="tag">SPORTS MISPRICING DATA</span>
+<h1><span class="en">Why is Polymarket sports always <em>half a beat late</em>?</span><span class="zh">Polymarket 体育盘<br>为什么总<em>慢半拍</em>？</span></h1>
+<p class="lead"><span class="en"><b>Sports mispricing data.</b> Every signal recorded in full, settled by conservative CLV, publicly verifiable.</span><span class="zh"><b>体育错价数据订阅。</b>每个信号完整记录，以保守口径 CLV 结算，公开可查。</span></p>
+<p><a class="btn" href="https://t.me/clvlab"><span class="en">Join the Telegram channel</span><span class="zh">进入 Telegram 频道</span> →</a></p>
+<div class="meta"><span class="en">COVERING NBA · NFL · CFB</span><span class="zh">覆盖 NBA · NFL · CFB</span> ｜ <span class="en">NHL UNDER OBSERVATION</span><span class="zh">NHL 观察中</span><br>NOT FINANCIAL ADVICE</div></div>
+<div class="tlabel"><span class="en">ON WATCH · NEXT 24H</span><span class="zh">未来 24 小时盯赛</span></div><div class="ticker"><div class="track"><span class="tk"><b>NBA</b> 23:00 UTC / 07:00 HKT · Nets vs. Hornets</span><span class="dia">◆</span><span class="tk"><b>NBA</b> 00:00 UTC / 08:00 HKT · Pelicans vs. Thunder</span><span class="dia">◆</span><span class="tk"><b>CFB</b> 00:00 UTC / 08:00 HKT · Southern Miss vs. Troy</span><span class="dia">◆</span><span class="tk"><b>NBA</b> 01:00 UTC / 09:00 HKT · Nuggets vs. Jazz</span><span class="dia">◆</span><span class="tk"><b>NBA</b> 02:00 UTC / 10:00 HKT · Lakers vs. Warriors</span><span class="dia">◆</span><span class="tk"><b>NBA</b> 23:00 UTC / 07:00 HKT · Nets vs. Hornets</span><span class="dia">◆</span><span class="tk"><b>NBA</b> 00:00 UTC / 08:00 HKT · Pelicans vs. Thunder</span><span class="dia">◆</span><span class="tk"><b>CFB</b> 00:00 UTC / 08:00 HKT · Southern Miss vs. Troy</span><span class="dia">◆</span><span class="tk"><b>NBA</b> 01:00 UTC / 09:00 HKT · Nuggets vs. Jazz</span><span class="dia">◆</span><span class="tk"><b>NBA</b> 02:00 UTC / 10:00 HKT · Lakers vs. Warriors</span><span class="dia">◆</span></div></div></section><section class="screen" id="s2"><div class="inner reveal"><div class="idx"><b>02</b> / 10 · Public record</div><h2><span class="en">The record so far</span><span class="zh">正式记录</span></h2>
+<div class="kpis"><div><small><span class="en">Picks</span><span class="zh">选边</span></small><b>1</b></div><div><small><span class="en">Settled</span><span class="zh">已结算</span></small><b>1</b></div>
+<div><small><span class="en">Avg conservative CLV</span><span class="zh">平均保守 CLV</span></small><b>−3.6%</b></div>
+<div><small>CLV &gt; 0</small><b>0%</b></div></div>
+<p class="note"><span class="en">Since 2026-10-05 00:00 UTC. Data as of 2026-10-05 23:00 UTC / 10-06 07:00 HKT. Small samples prove nothing — that's why everything stays public until there are 100.</span><span class="zh">自 2026-10-05 00:00 UTC 起算。数据截至 2026-10-05 23:00 UTC / 10-06 07:00 HKT。样本太小说明不了任何事——这正是攒够 100 条之前全部公开的原因。</span></p></div></section><section class="screen" id="s3"><div class="inner reveal"><div class="idx"><b>03</b> / 10 · Cases</div><h2><span class="en">Real cases</span><span class="zh">真实案例</span></h2><p class="note swipe"><span class="en">Swipe for more →</span><span class="zh">左右滑动查看 →</span></p>
+<div class="cases"><article class="card case">
+<div class="row between"><span class="mono dim">NBA · 2026-10-05</span>
+<span class="badge"><span class="en">Formal record</span><span class="zh">正式记录</span></span></div>
+<h3>Knicks vs. 76ers</h3>
+<div class="kv"><div><small><span class="en">Pick</span><span class="zh">方向</span></small><b>76ers</b></div>
+<div><small><span class="en">Entry</span><span class="zh">入场</span></small><b class="mono">0.38</b></div>
+<div><small><span class="en">Edge range</span><span class="zh">edge 区间</span></small><b class="mono">5-8%</b></div>
+<div><small><span class="en">Conservative CLV</span><span class="zh">保守 CLV</span></small><b class="mono neg">−3.6%</b></div></div></article></div><a class="link" href="record/"><span class="en">Calibration period: 3 records — public, not counted →</span><span class="zh">校准期 3 条——照样公开，不计入统计 →</span></a><p style="margin-top:16px"><a class="btn ghost" href="record/"><span class="en">Full public record</span><span class="zh">完整公开记录</span> →</a></p></div></section><section class="screen" id="s4"><div class="inner reveal"><div class="idx"><b>04</b> / 10 · Market structure</div><h2><span class="en">Why mispricing exists</span><span class="zh">为什么错价存在</span></h2>
+<p class="lead"><span class="en">Not chance — structure.</span><span class="zh">错价不是偶然，是结构。</span></p><div class="mech">
+<div class="card"><span class="n">01</span><h3><span class="en">No sharp money inside</span><span class="zh">场内没有 sharp 的钱</span></h3><p><span class="en">Retail flow sets the price; the truest price sits outside — the sharp book with its margin removed.</span><span class="zh">散户决定价格；最接近真值的价格在场外——去掉抽成的职业报价。</span></p></div>
+<div class="card"><span class="n">02</span><h3><span class="en">Thin liquidity</span><span class="zh">流动性浅</span></h3><p><span class="en">A few hundred dollars move a price; nobody inside corrects it.</span><span class="zh">几百美金就能推动价格，场内没有纠偏的力量。</span></p></div>
+<div class="card"><span class="n">03</span><h3><span class="en">Fees as a filter</span><span class="zh">费用过滤器</span></h3><p><span class="en">Fees eat thin 1–2% gaps, so only thick deviations are flagged.</span><span class="zh">手续费会吃掉 1–2% 的薄偏差，所以只报够厚的。</span></p></div></div></div></section><section class="screen" id="s5"><div class="inner reveal"><div class="idx"><b>05</b> / 10 · Edge → CLV <span class="badge" style="letter-spacing:0"><span class="en">Illustration</span><span class="zh">示意图</span></span></div><h2><span class="en">Two lines. One gap.</span><span class="zh">两条线，一段距离。</span></h2><svg viewBox="0 0 640 220" class="chart" role="img" aria-label="illustration">
+<defs><linearGradient id="gap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#45d0e0" stop-opacity=".22"/>
+<stop offset="1" stop-color="#45d0e0" stop-opacity="0"/></linearGradient></defs>
+<path d="M170,78 L240,126 L300,136 L380,142 L450,132 L520,104 L560,99 L560,78 Z" fill="url(#gap)"/>
+<line x1="20" y1="78" x2="620" y2="78" class="sharp" stroke-dasharray="6 7"/>
+<polyline points="20,78 170,78 240,126 300,136 380,142 450,132 520,104 620,98" class="mkt"/>
+<circle cx="300" cy="136" r="5" class="dot"/><circle cx="380" cy="142" r="5" class="dot"/>
+<line x1="560" y1="24" x2="560" y2="196" class="start" stroke-dasharray="2 6"/>
+<text x="566" y="38" class="tx">start</text><text x="24" y="66" class="tx acc">sharp no-vig</text>
+<text x="300" y="170" class="tx cy">signal</text></svg>
+<div class="legend"><span><i style="background:var(--acc)"></i><span class="en">Sharp no-vig line (conservative)</span><span class="zh">公允价：场外 sharp 去抽成价（保守口径）</span></span>
+<span><i style="background:var(--cy)"></i><span class="en">Polymarket price</span><span class="zh">市价：Polymarket 市场价格</span></span></div>
+<p class="note" style="margin-top:14px"><span class="en">The gap is the edge. Prices don't always converge — the CLV at the close is what counts.</span><span class="zh">两条线之间的距离就是 edge。价格不一定会收敛——以收盘时的 CLV 为准。</span></p></div></section><section class="screen" id="s6"><div class="inner reveal"><div class="idx"><b>06</b> / 10 · The moat</div><h2><span class="en">One needle, many backups</span><span class="zh">一根针，多重备份</span></h2>
+<p class="quote"><span class="en">One factor: <em>how far the market is from the no-vig price.</em> No more, no less.</span><span class="zh">唯一的因子：<em>市价离 de-vig 公允价有多远。</em>不多不少。</span></p>
+<p class="lead"><span class="en">Quote sources are tiered and switch automatically — if one fails, the needle stays. Extra sources are redundancy, not confirmation.</span><span class="zh">报价源按品质分级、自动切换，任何一个断了，针照样在。多源是为了容错，不是互相印证。</span></p></div></section><section class="screen" id="s7"><div class="inner reveal"><div class="idx"><b>07</b> / 10 · Verification</div><h2><span class="en">The ledger, not feelings</span><span class="zh">只认 ledger，不认感觉</span></h2>
+<p class="lead"><span class="en">Every signal is recorded with its public fields. None is ever deleted.</span><span class="zh">每个信号按公开字段记录，一条都不删。</span></p>
+<div class="fields"><div><span class="en">Signal time</span><span class="zh">触发时间</span></div><div><span class="en">Market</span><span class="zh">市场</span></div><div><span class="en">Side</span><span class="zh">方向</span></div><div><span class="en">Public entry</span><span class="zh">公开进场价</span></div><div><span class="en">Edge range</span><span class="zh">edge 区间</span></div><div><span class="en">Conservative CLV</span><span class="zh">保守 CLV</span></div><div class=wide><span class="en">hash</span><span class="zh">hash</span></div></div>
+<p><span class="en">Hash-chained: change a character or delete a row and the chain breaks — anyone can verify with the public script.</span><span class="zh">hash 链存证：改一个字、删一行，链就断——任何人都能用公开的脚本验证。</span></p>
+<div class="chain">chain head 26e667a7deec947c23ce254dde212fc93c024a4170f8f6ebd95c562720bf61a0</div><a class="btn ghost" href="record/"><span class="en">View the full record</span><span class="zh">查看完整记录站</span> →</a></div></section><section class="screen" id="s8"><div class="inner reveal"><div class="idx"><b>08</b> / 10 · Signal lifecycle</div><h2><span class="en">A signal's journey</span><span class="zh">一条信号的旅程</span></h2><div class="steps"><div class="step"><div class="num">01</div><div><b><span class="en">Trigger</span><span class="zh">触发</span></b><code>TRIGGER</code><p><span class="en">The price drifts far enough from the sharp no-vig line to clear the bar. Scanning around the clock: NBA · NFL · CFB.</span><span class="zh">市价偏离公允价达到标准，信号生成。7×24 扫描 NBA · NFL · CFB。</span></p></div></div><div class="step"><div class="num">02</div><div><b><span class="en">Record</span><span class="zh">存证</span></b><code>RECORD</code><p><span class="en">Public fields and hash go into the ledger — any edit breaks the chain.</span><span class="zh">公开字段与 hash 进 ledger——任何改动都会让链断开。</span></p></div></div><div class="step"><div class="num">03</div><div><b><span class="en">Push</span><span class="zh">推送</span></b><code>PUSH</code><p><span class="en">Sent to the Telegram channel: the same row as the public record.</span><span class="zh">推送到 Telegram 频道，与公开记录是同一条。</span></p></div></div><div class="step"><div class="num">04</div><div><b><span class="en">Decide</span><span class="zh">决定</span></b><code>DECIDE</code><p><span class="en">Use it or not — your call. Not financial advice.</span><span class="zh">用不用，你自己定。Not financial advice.</span></p></div></div><div class="step"><div class="num">05</div><div><b><span class="en">Settle</span><span class="zh">结算</span></b><code>SETTLE</code><p><span class="en">At game start, conservative CLV is replied under the signal — good or bad.</span><span class="zh">开赛后保守 CLV 直接回复在原信号下面，好坏都公开。</span></p></div></div></div></div></section><section class="screen" id="s9"><div class="inner reveal"><div class="idx"><b>09</b> / 10 · Last words</div><div class="center"><h2><span class="en">This is the shovel.</span><span class="zh">这就是这把铲子。</span></h2>
+<p class="lead"><span class="en">There's no shortage of signals; what's missing is <b>complete, verifiable data</b>.</span><span class="zh">市面上不缺信号，缺的是<b>完整、可验证的数据</b>。</span></p>
+<p class="note"><span class="en">CLV replied under every signal, good or bad · daily recap at 09:00 HKT with the next 24h on watch (UTC / HKT).</span><span class="zh">CLV 好坏都回复在原信号下面 · 每天 09:00 HKT 小结，附未来 24 小时盯赛（UTC / HKT）。</span></p>
+<p style="margin-top:22px"><a class="btn" href="https://t.me/clvlab"><span class="en">Join the Telegram channel</span><span class="zh">进入 Telegram 频道</span> →</a></p>
+<div class="banner"><span class="en">NBA REGULAR SEASON · OCT 20</span><span class="zh">NBA 常规赛 · 10 月 20 日开打</span></div></div></div></section><section class="screen" id="s10"><div class="inner reveal"><div class="idx"><b>10</b> / 10 · FAQ</div><h2><span class="en">FAQ</span><span class="zh">常见问题</span></h2><details><summary><span class="mono acc">Q1</span><span class="en">What fields does the data include?</span><span class="zh">数据包含哪些字段？</span><span class="plus">+</span></summary><p><span class="en">Signal time, market, side, public entry price, edge range, conservative CLV and the record's hash. No model internals.</span><span class="zh">触发时间、市场、方向、公开进场价、edge 区间、保守口径 CLV，以及该条记录的 hash。不公开模型细节。</span></p></details><details><summary><span class="mono acc">Q2</span><span class="en">How much does it cost?</span><span class="zh">多少钱？</span><span class="plus">+</span></summary><p><span class="en">Free for now. Paid plans will run inside Telegram and be announced in advance; early members get founder pricing.</span><span class="zh">目前免费。收费方案将直接在 Telegram 内完成，并提前公告；早期加入的有创始优惠。</span></p></details><details><summary><span class="mono acc">Q3</span><span class="en">How do I use a signal?</span><span class="zh">怎么使用信号？</span><span class="plus">+</span></summary><p><span class="en">It is data, not advice. Compare the price you can get with the public entry — every minute and every tick shrinks the edge. Judge by CLV over many signals, never single results.</span><span class="zh">这是数据，不是建议。先比较你拿得到的价格和公开进场价——每过一分钟、每差一格，优势都在缩小。看很多条信号的 CLV，不看单场输赢。</span></p></details><details><summary><span class="mono acc">Q4</span><span class="en">Can the record be verified?</span><span class="zh">记录能验证吗？</span><span class="plus">+</span></summary><p><span class="en">Yes. Download public_chain.jsonl and chain.py from the record page and run <code>python chain.py public_chain.jsonl</code>. Each channel message carries the first 12 characters of its record's hash.</span><span class="zh">可以。在记录页下载 public_chain.jsonl 和 chain.py，运行 <code>python chain.py public_chain.jsonl</code>。每条频道消息都带该记录 hash 的前 12 位。</span></p></details>
+<footer><span class="logo">CLV<b>Lab</b></span><a href="https://t.me/clvlab"><span class="en">Channel</span><span class="zh">频道</span> t.me/clvlab</a><a href="record/"><span class="en">Full record</span><span class="zh">记录站</span> /record</a>
+<div class="nfa">NOT FINANCIAL ADVICE.</div></footer></div></section>
+<script>(function(){var d=document.documentElement,b=document.getElementById('lang'),l;d.classList.add('js');
+try{l=localStorage.getItem('lang')}catch(e){}
+if(!l)l=/^zh/i.test(navigator.language||'')?'zh':'en';
+function set(x){d.setAttribute('data-lang',x);d.lang=x==='zh'?'zh-Hans':'en';b.textContent=x==='zh'?'EN':'中文';try{localStorage.setItem('lang',x)}catch(e){}}
+set(l);b.onclick=function(){set(d.getAttribute('data-lang')==='zh'?'en':'zh')};
+var dots=[].slice.call(document.querySelectorAll('.dots a'));
+if(!('IntersectionObserver' in window)){[].forEach.call(document.querySelectorAll('.reveal'),function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+e.target.querySelectorAll('.reveal').forEach(function(r){r.classList.add('in')});
+dots.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{threshold:.45});
+[].forEach.call(document.querySelectorAll('.screen'),function(s){io.observe(s)});})();</script></body></html>
