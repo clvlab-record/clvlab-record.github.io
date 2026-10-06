@@ -79,7 +79,12 @@ footer .nfa{width:100%;font:500 11px var(--mono);letter-spacing:.3em;margin-top:
 .kpis>div{padding:14px 16px}.kpis b{font-size:30px}h1{font-size:36px}.quote{font-size:21px}.fields div{padding:10px 6px;font-size:13px}}
 @media (max-width:760px) and (max-height:690px){.screen{padding:64px 18px 26px}h2{font-size:24px}.cases+.link{padding:10px 0}.swipe{display:none}
 .mech p{font-size:13px}.step{padding:9px 12px}.step p{font-size:12.5px}.lead{margin:6px 0}.chart{margin:0}}
-@media (min-width:761px){.mech{grid-template-columns:repeat(3,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:761px){.mech{grid-template-columns:repeat(3,1fr)}.kpis{grid-template-columns:repeat(4,1fr)}
+.swipe{display:none}.cases{display:grid;gap:12px;overflow:visible;margin:10px 0 16px;padding:0}
+.case{display:grid;grid-template-columns:minmax(220px,1fr) 2.3fr;grid-template-areas:"meta kv" "title kv";column-gap:22px;align-items:center;padding:18px 18px 18px 24px}
+.case>.row{grid-area:meta;flex-direction:column;align-items:flex-start;gap:8px}.case h3{grid-area:title;margin:6px 0 0}
+.case .kv{grid-area:kv;grid-template-columns:repeat(4,1fr)}.case:nth-child(n+4){display:none}.case.dim{display:block}}
+@media (min-width:761px) and (max-height:800px){#s3{padding-top:80px;padding-bottom:36px}.case{padding:12px 16px 12px 22px}.case .kv>div{padding:10px 14px}.cases{gap:10px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker .track{animation:none}.js .reveal{opacity:1;transform:none;transition:none}}
 </style></head><body>
 <header><span class="logo">CLV<b>Lab</b></span><div class="row"><button class="lang" id="lang" type="button">中文</button>
@@ -94,7 +99,7 @@ footer .nfa{width:100%;font:500 11px var(--mono);letter-spacing:.3em;margin-top:
 <div class="kpis"><div><small><span class="en">Picks</span><span class="zh">选边</span></small><b>1</b></div><div><small><span class="en">Settled</span><span class="zh">已结算</span></small><b>1</b></div>
 <div><small><span class="en">Avg conservative CLV</span><span class="zh">平均保守 CLV</span></small><b>−3.6%</b></div>
 <div><small>CLV &gt; 0</small><b>0%</b></div></div>
-<p class="note"><span class="en">Since 2026-10-05 00:00 UTC. Data as of 2026-10-05 23:00 UTC / 10-06 07:00 HKT. Small samples prove nothing — that's why everything stays public until there are 100.</span><span class="zh">自 2026-10-05 00:00 UTC 起算。数据截至 2026-10-05 23:00 UTC / 10-06 07:00 HKT。样本太小说明不了任何事——这正是攒够 100 条之前全部公开的原因。</span></p></div></section><section class="screen" id="s3"><div class="inner reveal"><div class="idx"><b>03</b> / 10 · Cases</div><h2><span class="en">Real cases</span><span class="zh">真实案例</span></h2><p class="note swipe"><span class="en">Swipe for more →</span><span class="zh">左右滑动查看 →</span></p>
+<p class="note"><span class="en">Since 2026-10-05 00:00 UTC. Data as of 2026-10-05 23:00 UTC / 10-06 07:00 HKT. Small samples prove nothing — that's why everything stays public until there are 100.</span><span class="zh">自 2026-10-05 00:00 UTC 起算。数据截至 2026-10-05 23:00 UTC / 10-06 07:00 HKT。样本太小说明不了任何事——这正是攒够 100 条之前全部公开的原因。</span></p></div></section><section class="screen" id="s3"><div class="inner reveal"><div class="idx"><b>03</b> / 10 · Cases</div><h2><span class="en">Real cases</span><span class="zh">真实案例</span></h2><p class="note swipe" hidden><span class="en">Swipe for more →</span><span class="zh">左右滑动查看 →</span></p>
 <div class="cases"><article class="card case">
 <div class="row between"><span class="mono dim">NBA · 2026-10-05</span>
 <span class="badge"><span class="en">Formal record</span><span class="zh">正式记录</span></span></div>
