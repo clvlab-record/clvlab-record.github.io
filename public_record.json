@@ -1,5 +1,20 @@
 [
  {
+  "id": "a78a4a4d823e",
+  "published": "2026-10-10T23:03:09Z",
+  "sport": "nba",
+  "game": "Timberwolves vs. Heat",
+  "pick": "Timberwolves",
+  "start": "2026-10-11T00:00:00Z",
+  "entry_price": 0.56,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending"
+ },
+ {
   "id": "bfba0fa67beb",
   "published": "2026-10-05T21:32:55Z",
   "sport": "nba",
