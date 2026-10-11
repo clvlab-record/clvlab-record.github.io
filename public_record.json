@@ -8,11 +8,11 @@
   "start": "2026-10-11T00:00:00Z",
   "entry_price": 0.56,
   "edge_bucket": "3-5%",
-  "clv": null,
-  "clv_basis": null,
+  "clv": 0.03261,
+  "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "pending"
+  "status": "ok"
  },
  {
   "id": "bfba0fa67beb",
