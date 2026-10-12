@@ -1,5 +1,20 @@
 [
  {
+  "id": "a321c79c9f5c",
+  "published": "2026-10-12T22:29:19Z",
+  "sport": "nba",
+  "game": "Timberwolves vs. Knicks",
+  "pick": "Knicks",
+  "start": "2026-10-12T23:30:00Z",
+  "entry_price": 0.47,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending"
+ },
+ {
   "id": "c3ca1b2b9ab3",
   "published": "2026-10-12T21:27:43Z",
   "sport": "nba",
@@ -8,11 +23,11 @@
   "start": "2026-10-12T23:00:00Z",
   "entry_price": 0.59,
   "edge_bucket": "3-5%",
-  "clv": null,
-  "clv_basis": null,
+  "clv": 0.08363,
+  "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "pending"
+  "status": "ok"
  },
  {
   "id": "a78a4a4d823e",
