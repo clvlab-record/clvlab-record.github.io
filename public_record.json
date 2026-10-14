@@ -12,7 +12,8 @@
   "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "ok"
+  "status": "ok",
+  "pick_no": 4
  },
  {
   "id": "c3ca1b2b9ab3",
@@ -27,7 +28,8 @@
   "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "ok"
+  "status": "ok",
+  "pick_no": 3
  },
  {
   "id": "a78a4a4d823e",
@@ -42,7 +44,8 @@
   "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "ok"
+  "status": "ok",
+  "pick_no": 2
  },
  {
   "id": "bfba0fa67beb",
@@ -57,7 +60,8 @@
   "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "ok"
+  "status": "ok",
+  "pick_no": 1
  },
  {
   "id": "052f2c99d34c",
@@ -72,7 +76,8 @@
   "clv_basis": "multiplicative",
   "repeat": false,
   "calibration": true,
-  "status": "ok"
+  "status": "ok",
+  "pick_no": null
  },
  {
   "id": "1efe62c0d3ca",
@@ -87,7 +92,8 @@
   "clv_basis": "multiplicative",
   "repeat": true,
   "calibration": true,
-  "status": "ok"
+  "status": "ok",
+  "pick_no": null
  },
  {
   "id": "13e23d749008",
@@ -102,6 +108,7 @@
   "clv_basis": "multiplicative",
   "repeat": false,
   "calibration": true,
-  "status": "ok"
+  "status": "ok",
+  "pick_no": null
  }
 ]
