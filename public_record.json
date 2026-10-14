@@ -13,7 +13,8 @@
   "repeat": false,
   "calibration": false,
   "status": "ok",
-  "pick_no": 4
+  "pick_no": 4,
+  "venue": "polymarket"
  },
  {
   "id": "c3ca1b2b9ab3",
@@ -29,7 +30,8 @@
   "repeat": false,
   "calibration": false,
   "status": "ok",
-  "pick_no": 3
+  "pick_no": 3,
+  "venue": "polymarket"
  },
  {
   "id": "a78a4a4d823e",
@@ -45,7 +47,8 @@
   "repeat": false,
   "calibration": false,
   "status": "ok",
-  "pick_no": 2
+  "pick_no": 2,
+  "venue": "polymarket"
  },
  {
   "id": "bfba0fa67beb",
@@ -61,7 +64,8 @@
   "repeat": false,
   "calibration": false,
   "status": "ok",
-  "pick_no": 1
+  "pick_no": 1,
+  "venue": "polymarket"
  },
  {
   "id": "052f2c99d34c",
@@ -77,7 +81,8 @@
   "repeat": false,
   "calibration": true,
   "status": "ok",
-  "pick_no": null
+  "pick_no": null,
+  "venue": "polymarket"
  },
  {
   "id": "1efe62c0d3ca",
@@ -93,7 +98,8 @@
   "repeat": true,
   "calibration": true,
   "status": "ok",
-  "pick_no": null
+  "pick_no": null,
+  "venue": "polymarket"
  },
  {
   "id": "13e23d749008",
@@ -109,6 +115,7 @@
   "repeat": false,
   "calibration": true,
   "status": "ok",
-  "pick_no": null
+  "pick_no": null,
+  "venue": "polymarket"
  }
 ]
