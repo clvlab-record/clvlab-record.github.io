@@ -1,5 +1,24 @@
 [
  {
+  "id": "5d6b21df2a11",
+  "published": "2026-10-16T20:45:49Z",
+  "sport": "nba",
+  "game": "Orlando Magic vs. Miami Heat",
+  "pick": "Miami Heat",
+  "start": "2026-10-16T23:00:00Z",
+  "entry_price": 0.33,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 1,
+  "venue": "sxbet",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "dea8c5a7626d",
   "published": "2026-10-16T16:08:36Z",
   "sport": "dehl",
