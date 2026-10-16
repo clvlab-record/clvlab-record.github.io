@@ -1,5 +1,24 @@
 [
  {
+  "id": "32cb5aefbdf5",
+  "published": "2026-10-16T07:08:44Z",
+  "sport": "itf",
+  "game": "Robin Bertrand vs. Felix Roussel",
+  "pick": "Felix Roussel",
+  "start": "2026-10-16T09:00:00Z",
+  "entry_price": 0.19,
+  "edge_bucket": "5-8%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 1,
+  "venue": "kalshi",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "a321c79c9f5c",
   "published": "2026-10-12T22:29:19Z",
   "sport": "nba",
