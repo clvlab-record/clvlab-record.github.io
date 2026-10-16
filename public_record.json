@@ -8,14 +8,14 @@
   "start": "2026-10-16T09:00:00Z",
   "entry_price": 0.19,
   "edge_bucket": "5-8%",
-  "clv": null,
-  "clv_basis": null,
+  "clv": -0.01221,
+  "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "pending",
+  "status": "ok",
   "pick_no": 1,
   "venue": "kalshi",
-  "clv_market": null,
+  "clv_market": -0.07895,
   "result": null
  },
  {
