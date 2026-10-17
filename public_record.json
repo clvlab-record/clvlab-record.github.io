@@ -20,7 +20,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": null,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "3ac4de22cfac",
@@ -43,7 +43,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": null,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "bc0c7909cdbd",
