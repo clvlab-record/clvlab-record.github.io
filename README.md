@@ -7,6 +7,13 @@ Every signal is listed — wins and losses. The run: 100 public signals, each co
 - **CLV** (closing line value) = sharp closing no-vig price ÷ published entry price − 1. Positive CLV over
   many picks is what separates real edge from luck.
 
+## Seasons
+
+The record runs in seasons. Season 0 was the testing period; Season 1 starts with the NBA regular season
+(2026-10-20 00:00 UTC) and its counts start again at 1 / 100. Season 0's rows are not deleted: they are archived in
+[`archive/season-0/public_chain.jsonl`](archive/season-0/), and Season 1's run starts with the hash of Season 0's last
+row, so the two runs verify as one: `python chain.py public_chain.jsonl --after <Season 0 head>`.
+
 ## Verify nothing was deleted or edited
 
 Every record carries the hash of the record before it. Download

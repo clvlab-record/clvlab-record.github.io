@@ -12,6 +12,8 @@ whose Telegram timestamps are a third-party record of when each row existed.
 Standard library only, so subscribers can verify the published file themselves:
 
   python chain.py public_chain.jsonl
+  python chain.py public_chain.jsonl --after <hash>   # a season's run: its first row continues the archived run whose
+                                                      # head is <hash> (archive/season-0/public_chain.jsonl prints it)
 """
 from __future__ import annotations
 
@@ -50,10 +52,11 @@ def chained(path: Path, row: dict) -> dict:
     return row
 
 
-def verify(data: bytes) -> tuple[bool, int, str, str]:
-    """-> (ok, chained rows checked, head hash, error). `data` = file bytes, rows in write order."""
+def verify(data: bytes, after: str | None = None) -> tuple[bool, int, str, str]:
+    """-> (ok, chained rows checked, head hash, error). `data` = file bytes, rows in write order.
+    `after`: the file is a continuation (a new season's run): its first row must point at this hash."""
     prefix = b""
-    prev: str | None = None
+    prev: str | None = after
     n = 0
     for line in data.splitlines(keepends=True):
         if not line.strip():
@@ -75,8 +78,13 @@ def verify(data: bytes) -> tuple[bool, int, str, str]:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        sys.exit("usage: python chain.py public_chain.jsonl")
-    ok, n, head, err = verify(Path(sys.argv[1]).read_bytes())
+    args = sys.argv[1:]
+    after = None
+    if len(args) == 3 and args[1] == "--after":
+        after = args[2]
+        args = args[:1]
+    if len(args) != 1:
+        sys.exit("usage: python chain.py public_chain.jsonl [--after <hash of the run it continues>]")
+    ok, n, head, err = verify(Path(args[0]).read_bytes(), after)
     print(f"{'OK' if ok else 'BROKEN'}: {n} chained rows, head {head}" + (f"\n{err}" if err else ""))
     sys.exit(0 if ok else 1)
