@@ -1,5 +1,28 @@
 [
  {
+  "id": "812d09761354",
+  "published": "2026-10-17T12:25:01Z",
+  "sport": "atp",
+  "game": "Martin Damm vs. Buvaysar Gadamauri",
+  "pick": "Buvaysar Gadamauri",
+  "start": "2026-10-17T14:20:00Z",
+  "entry_price": 0.14,
+  "edge_bucket": "8%+",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 1,
+  "venue": "polymarket_us",
+  "line": "Polymarket US \u00b7 Taker \u00b7 Moneyline",
+  "platform": "polymarket_us",
+  "strategy": "taker",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "478ace405f01",
   "published": "2026-10-16T22:51:07Z",
   "sport": "nba",
