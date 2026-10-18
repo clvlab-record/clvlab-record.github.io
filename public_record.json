@@ -1,5 +1,28 @@
 [
  {
+  "id": "c54e2c274648",
+  "published": "2026-10-18T08:04:35Z",
+  "sport": "atp",
+  "game": "Almaty Open, Qualification: Roman Safiullin vs Ilia Simakin",
+  "pick": "Ilia Simakin",
+  "start": "2026-10-18T09:00:00Z",
+  "entry_price": 0.19,
+  "edge_bucket": "5-8%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 4,
+  "venue": "polymarket_hold",
+  "line": "Polymarket \u00b7 Hold \u00b7 Moneyline",
+  "platform": "polymarket",
+  "strategy": "hold",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "3196494acfec",
   "published": "2026-10-18T00:40:45Z",
   "sport": "cfb",
