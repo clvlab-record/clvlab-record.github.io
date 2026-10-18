@@ -1,5 +1,28 @@
 [
  {
+  "id": "3196494acfec",
+  "published": "2026-10-18T00:40:45Z",
+  "sport": "cfb",
+  "game": "San Diego State Aztecs vs. Fresno State Bulldogs",
+  "pick": "Under 45.5",
+  "start": "2026-10-18T02:30:00Z",
+  "entry_price": 0.485,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 1,
+  "venue": "sxbet_lines",
+  "line": "SX \u00b7 Taker \u00b7 Spreads/Totals",
+  "platform": "sxbet",
+  "strategy": "taker",
+  "market": "lines",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "e98852944649",
   "published": "2026-10-17T13:26:13Z",
   "sport": "atp",
