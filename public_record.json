@@ -1,5 +1,28 @@
 [
  {
+  "id": "b4fdd12dc43a",
+  "published": "2026-10-18T15:58:33Z",
+  "sport": "dehl",
+  "game": "Red Bull Munich vs. Nuremberg Ice Tigers",
+  "pick": "Red Bull Munich",
+  "start": "2026-10-18T17:00:00Z",
+  "entry_price": 0.61,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 5,
+  "venue": "kalshi",
+  "line": "Kalshi \u00b7 Taker \u00b7 Moneyline",
+  "platform": "kalshi",
+  "strategy": "taker",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "0bd4b5d405ff",
   "published": "2026-10-18T10:46:39Z",
   "sport": "dehl",
@@ -66,7 +89,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": 0.07353,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "bf5b337ccfa9",
