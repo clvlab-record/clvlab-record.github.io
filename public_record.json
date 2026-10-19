@@ -1,5 +1,28 @@
 [
  {
+  "id": "accd0cdae86d",
+  "published": "2026-10-19T07:38:07Z",
+  "sport": "itf",
+  "game": "Valerio Bracci vs. Gabriele Bosio",
+  "pick": "Valerio Bracci",
+  "start": "2026-10-19T10:30:00Z",
+  "entry_price": 0.17,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 2,
+  "venue": "polymarket_us",
+  "line": "Polymarket US \u00b7 Taker \u00b7 Moneyline",
+  "platform": "polymarket_us",
+  "strategy": "taker",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "b4fdd12dc43a",
   "published": "2026-10-18T15:58:33Z",
   "sport": "dehl",
