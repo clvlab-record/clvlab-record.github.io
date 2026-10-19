@@ -1,0 +1,7 @@
+CLV LAB public record — hash-chain head anchored to Bitcoin
+date_utc: 2026-10-19
+rows: 28
+head: 85e1c3a274db4c2087585024743b68ae6da32c1f0d6c47b47283300937b89bf9
+chain: https://clvlab-record.github.io/public_chain.jsonl
+check: python chain.py public_chain.jsonl  (its head must equal the head above)
+proof: ots verify 2026-10-19.txt.ots  (or opentimestamps.org)
