@@ -29,7 +29,13 @@ commit history is a second timestamped log.
 
 Once a day the chain head is written to [`anchors/<date>.txt`](anchors/) and timestamped with
 [OpenTimestamps](https://opentimestamps.org): `anchors/<date>.txt.ots` proves the file existed by a Bitcoin block.
-Run `ots verify anchors/<date>.txt.ots` (or drop both files on opentimestamps.org) and check that the head in the
-`.txt` equals the head `chain.py` prints. Every record before that head is covered by it.
+Run `ots verify anchors/<date>.txt.ots` (or drop both files on opentimestamps.org). Then take the chain as it was
+that day — its first `rows` rows (the number is in the `.txt`) — and check that `chain.py` prints the head in the
+`.txt`:
+
+    cat public_chain.jsonl | head -n <rows> > upto.jsonl && python chain.py upto.jsonl
+
+The chain keeps growing, so the head of the whole file moves on; the first `rows` rows never change. Every record up
+to that head is covered by the anchor.
 
 Not financial advice.
