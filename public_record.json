@@ -8,18 +8,18 @@
   "start": "2026-10-20T01:30:00Z",
   "entry_price": 0.18,
   "edge_bucket": "3-5%",
-  "clv": null,
-  "clv_basis": null,
+  "clv": 0.10128,
+  "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "pending",
+  "status": "ok",
   "pick_no": 1,
   "venue": "polymarket_us",
   "line": "Polymarket US \u00b7 Taker \u00b7 Moneyline",
   "platform": "polymarket_us",
   "strategy": "taker",
   "market": "moneyline",
-  "clv_market": null,
+  "clv_market": 0.08333,
   "result": null
  }
 ]
