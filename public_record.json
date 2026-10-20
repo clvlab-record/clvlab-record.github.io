@@ -1,5 +1,28 @@
 [
  {
+  "id": "ab13c536a553",
+  "published": "2026-10-20T19:57:54Z",
+  "sport": "itf",
+  "game": "Bianca Jolie Fernandez vs. Carlota Martinez Cirez",
+  "pick": "Bianca Jolie Fernandez",
+  "start": "2026-10-20T20:51:40Z",
+  "entry_price": 0.17,
+  "edge_bucket": "8%+",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 2,
+  "venue": "polymarket_us",
+  "line": "Polymarket US \u00b7 Taker \u00b7 Moneyline",
+  "platform": "polymarket_us",
+  "strategy": "taker",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "0223c16ee1df",
   "published": "2026-10-20T07:55:45Z",
   "sport": "wta",
