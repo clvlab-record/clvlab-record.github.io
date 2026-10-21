@@ -1,5 +1,28 @@
 [
  {
+  "id": "560ad5f49cdd",
+  "published": "2026-10-21T10:37:37Z",
+  "sport": "itf",
+  "game": "Julia Avdeeva vs. Noma Noha Akugue",
+  "pick": "Noma Noha Akugue",
+  "start": "2026-10-21T12:30:00Z",
+  "entry_price": 0.59,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 3,
+  "venue": "kalshi",
+  "line": "Kalshi \u00b7 Taker \u00b7 Moneyline",
+  "platform": "kalshi",
+  "strategy": "taker",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "87c5a1d58665",
   "published": "2026-10-21T08:37:21Z",
   "sport": "itf",
