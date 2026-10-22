@@ -1,5 +1,51 @@
 [
  {
+  "id": "c222c27c72d3",
+  "published": "2026-10-22T14:20:36Z",
+  "sport": "shl",
+  "game": "SHL: \u00d6rebro HK vs. Bryn\u00e4s",
+  "pick": "\u00d6rebro HK",
+  "start": "2026-10-22T17:00:00Z",
+  "entry_price": 0.41,
+  "edge_bucket": "5-8%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 5,
+  "venue": "polymarket_hold",
+  "line": "Polymarket \u00b7 Hold \u00b7 Moneyline",
+  "platform": "polymarket",
+  "strategy": "hold",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
+  "id": "c1826e55cd08",
+  "published": "2026-10-22T14:20:36Z",
+  "sport": "shl",
+  "game": "SHL: \u00d6rebro HK vs. Bryn\u00e4s",
+  "pick": "\u00d6rebro HK",
+  "start": "2026-10-22T17:00:00Z",
+  "entry_price": 0.41,
+  "edge_bucket": "5-8%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 3,
+  "venue": "polymarket",
+  "line": "Polymarket \u00b7 Taker \u00b7 Moneyline",
+  "platform": "polymarket",
+  "strategy": "taker",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "a4c2202edc1b",
   "published": "2026-10-22T08:07:13Z",
   "sport": "itf",
@@ -273,7 +319,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.07759,
-  "result": null
+  "result": "won"
  },
  {
   "id": "8c57e65aefae",
@@ -296,7 +342,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.06034,
-  "result": null
+  "result": "won"
  },
  {
   "id": "9d6d9e67c3a7",
@@ -319,7 +365,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.30208,
-  "result": null
+  "result": "won"
  },
  {
   "id": "a28c91dc1c7a",
@@ -411,7 +457,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.03509,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "560ad5f49cdd",
