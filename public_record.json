@@ -1,5 +1,28 @@
 [
  {
+  "id": "facad34db138",
+  "published": "2026-10-22T04:16:40Z",
+  "sport": "itf",
+  "game": "Julio Cesar Porras vs. Pavlos Tsitsipas",
+  "pick": "Pavlos Tsitsipas",
+  "start": "2026-10-22T07:00:00Z",
+  "entry_price": 0.3,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 10,
+  "venue": "polymarket_us",
+  "line": "Polymarket US \u00b7 Taker \u00b7 Moneyline",
+  "platform": "polymarket_us",
+  "strategy": "taker",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "dd117a2537b9",
   "published": "2026-10-22T00:39:56Z",
   "sport": "itf",
