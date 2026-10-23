@@ -365,7 +365,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.02632,
-  "result": null
+  "result": "won"
  },
  {
   "id": "02007f228235",
@@ -388,7 +388,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": 0.02632,
-  "result": null
+  "result": "won"
  },
  {
   "id": "106322e3820f",
