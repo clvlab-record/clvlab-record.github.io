@@ -1,5 +1,28 @@
 [
  {
+  "id": "469b20f2806b",
+  "published": "2026-10-24T22:17:48Z",
+  "sport": "nba",
+  "game": "Spurs vs. Mavericks",
+  "pick": "Mavericks",
+  "start": "2026-10-25T00:00:00Z",
+  "entry_price": 0.13,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 16,
+  "venue": "polymarket_hold",
+  "line": "Polymarket \u00b7 Hold \u00b7 Moneyline",
+  "platform": "polymarket",
+  "strategy": "hold",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "d4b7941d504d",
   "published": "2026-10-24T21:18:40Z",
   "sport": "cfb",
