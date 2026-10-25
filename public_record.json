@@ -54,18 +54,18 @@
   "start": "2026-10-25T00:00:00Z",
   "entry_price": 0.13,
   "edge_bucket": "3-5%",
-  "clv": null,
-  "clv_basis": null,
+  "clv": -0.00515,
+  "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "pending",
+  "status": "ok",
   "pick_no": 16,
   "venue": "polymarket_hold",
   "line": "Polymarket \u00b7 Hold \u00b7 Moneyline",
   "platform": "polymarket",
   "strategy": "hold",
   "market": "moneyline",
-  "clv_market": null,
+  "clv_market": 0.03846,
   "result": null
  },
  {
@@ -181,7 +181,7 @@
   "strategy": "taker",
   "market": "lines",
   "clv_market": -0.03828,
-  "result": null
+  "result": "won"
  },
  {
   "id": "6e3389738d3e",
@@ -204,7 +204,7 @@
   "strategy": "taker",
   "market": "lines",
   "clv_market": null,
-  "result": null
+  "result": "won"
  },
  {
   "id": "8312b609550c",
