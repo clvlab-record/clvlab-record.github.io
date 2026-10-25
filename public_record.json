@@ -8,18 +8,18 @@
   "start": "2026-10-25T01:30:00Z",
   "entry_price": 0.37,
   "edge_bucket": "8%+",
-  "clv": null,
-  "clv_basis": null,
+  "clv": 0.08251,
+  "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "pending",
+  "status": "ok",
   "pick_no": 16,
   "venue": "polymarket_us",
   "line": "Polymarket US \u00b7 Taker \u00b7 Moneyline",
   "platform": "polymarket_us",
   "strategy": "taker",
   "market": "moneyline",
-  "clv_market": null,
+  "clv_market": 0.06757,
   "result": null
  },
  {
@@ -31,18 +31,18 @@
   "start": "2026-10-25T01:30:00Z",
   "entry_price": 0.37,
   "edge_bucket": "8%+",
-  "clv": null,
-  "clv_basis": null,
+  "clv": 0.08251,
+  "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "pending",
+  "status": "ok",
   "pick_no": 3,
   "venue": "polymarket_us_hold",
   "line": "Polymarket US \u00b7 Hold \u00b7 Moneyline",
   "platform": "polymarket_us",
   "strategy": "hold",
   "market": "moneyline",
-  "clv_market": null,
+  "clv_market": 0.06757,
   "result": null
  },
  {
@@ -112,7 +112,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.07692,
-  "result": null
+  "result": "won"
  },
  {
   "id": "0259e9201913",
@@ -135,7 +135,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": 0.07692,
-  "result": null
+  "result": "won"
  },
  {
   "id": "8b8f0c755879",
