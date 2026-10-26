@@ -20,7 +20,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": -0.03488,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "351012e89bf2",
@@ -43,7 +43,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": -0.03488,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "b928dc55b831",
@@ -66,7 +66,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": -0.1,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "34674840763a",
@@ -89,7 +89,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": -0.1,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "e07c27c66d14",
@@ -112,7 +112,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": -0.0875,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "83d616b7fde1",
@@ -135,7 +135,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": -0.0875,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "9950d98c0898",
@@ -434,7 +434,7 @@
   "strategy": "taker",
   "market": "lines",
   "clv_market": -0.0125,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "8feb7f2aba19",
