@@ -1,5 +1,28 @@
 [
  {
+  "id": "597ad1b222ea",
+  "published": "2026-10-26T14:57:11Z",
+  "sport": "atp",
+  "game": "Erste Bank Open: Jakub Mensik vs Lukas Neumayer",
+  "pick": "Lukas Neumayer",
+  "start": "2026-10-26T16:30:00Z",
+  "entry_price": 0.15,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 19,
+  "venue": "polymarket_hold",
+  "line": "Polymarket \u00b7 Hold \u00b7 Moneyline",
+  "platform": "polymarket",
+  "strategy": "hold",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "ffc60fa16b01",
   "published": "2026-10-26T13:58:44Z",
   "sport": "khl",
