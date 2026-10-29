@@ -1,5 +1,28 @@
 [
  {
+  "id": "05300a029ae0",
+  "published": "2026-10-29T16:00:36Z",
+  "sport": "shl",
+  "game": "SHL: R\u00f6gle vs. Malm\u00f6",
+  "pick": "Malm\u00f6",
+  "start": "2026-10-29T18:00:00Z",
+  "entry_price": 0.38,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 23,
+  "venue": "polymarket_hold",
+  "line": "Polymarket \u00b7 Hold \u00b7 Moneyline",
+  "platform": "polymarket",
+  "strategy": "hold",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "74ddf3e866d9",
   "published": "2026-10-29T14:41:09Z",
   "sport": "itf",
