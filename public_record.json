@@ -89,7 +89,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": 0.03846,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "0c3326cf7ca3",
