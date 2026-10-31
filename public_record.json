@@ -43,7 +43,7 @@
   "strategy": "taker",
   "market": "lines",
   "clv_market": -0.02314,
-  "result": null
+  "result": "won"
  },
  {
   "id": "d9f101569673",
