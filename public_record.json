@@ -1,5 +1,28 @@
 [
  {
+  "id": "158e4feed6ce",
+  "published": "2026-10-31T15:32:32Z",
+  "sport": "cfb",
+  "game": "Old Dominion Monarchs vs. Marshall Thundering Herd",
+  "pick": "Over 46.5",
+  "start": "2026-10-31T17:00:00Z",
+  "entry_price": 0.48625,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 3,
+  "venue": "sxbet_lines",
+  "line": "SX Bet \u00b7 Taker \u00b7 Spreads/Totals",
+  "platform": "sxbet",
+  "strategy": "taker",
+  "market": "lines",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "d9f101569673",
   "published": "2026-10-31T07:46:15Z",
   "sport": "itf",
