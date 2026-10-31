@@ -1,5 +1,28 @@
 [
  {
+  "id": "8cdae5f7e883",
+  "published": "2026-10-31T17:49:24Z",
+  "sport": "cfb",
+  "game": "Louisville Cardinals vs. Stanford Cardinal",
+  "pick": "Over 60.5",
+  "start": "2026-10-31T19:15:00Z",
+  "entry_price": 0.47,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 4,
+  "venue": "sxbet_lines",
+  "line": "SX Bet \u00b7 Taker \u00b7 Spreads/Totals",
+  "platform": "sxbet",
+  "strategy": "taker",
+  "market": "lines",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "158e4feed6ce",
   "published": "2026-10-31T15:32:32Z",
   "sport": "cfb",
