@@ -1,5 +1,51 @@
 [
  {
+  "id": "ed83e4c20636",
+  "published": "2026-11-03T01:38:32Z",
+  "sport": "itf",
+  "game": "Ena Koike vs. Xiaodi You",
+  "pick": "Ena Koike",
+  "start": "2026-11-03T05:00:00Z",
+  "entry_price": 0.35,
+  "edge_bucket": "5-8%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 30,
+  "venue": "polymarket_us",
+  "line": "Polymarket US \u00b7 Taker \u00b7 Moneyline",
+  "platform": "polymarket_us",
+  "strategy": "taker",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
+  "id": "f17f257c802f",
+  "published": "2026-11-03T01:38:32Z",
+  "sport": "itf",
+  "game": "Ena Koike vs. Xiaodi You",
+  "pick": "Ena Koike",
+  "start": "2026-11-03T05:00:00Z",
+  "entry_price": 0.35,
+  "edge_bucket": "5-8%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 17,
+  "venue": "polymarket_us_hold",
+  "line": "Polymarket US \u00b7 Hold \u00b7 Moneyline",
+  "platform": "polymarket_us",
+  "strategy": "hold",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "6c60141729e4",
   "published": "2026-11-01T10:16:53Z",
   "sport": "atp",
@@ -940,7 +986,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": -0.09804,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "7db9a86982e4",
@@ -963,7 +1009,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": -0.09804,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "eb1719965746",
