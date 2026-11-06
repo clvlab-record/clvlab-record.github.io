@@ -1,5 +1,28 @@
 [
  {
+  "id": "23cae3bbfcd0",
+  "published": "2026-11-06T05:15:02Z",
+  "sport": "itf",
+  "game": "W50 Heraklion: Lucie Nguyen Tan vs Martha MATOULA",
+  "pick": "Lucie Nguyen Tan",
+  "start": "2026-11-06T08:00:00Z",
+  "entry_price": 0.3,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 32,
+  "venue": "polymarket_hold",
+  "line": "Polymarket \u00b7 Hold \u00b7 Moneyline",
+  "platform": "polymarket",
+  "strategy": "hold",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "7df11272d9f0",
   "published": "2026-11-05T12:51:41Z",
   "sport": "itf",
