@@ -1,5 +1,28 @@
 [
  {
+  "id": "ef2d02e9db69",
+  "published": "2026-11-06T22:36:42Z",
+  "sport": "cfb",
+  "game": "Illinois Fighting Illini vs. Nebraska Cornhuskers",
+  "pick": "Under 50.5",
+  "start": "2026-11-07T01:00:00Z",
+  "entry_price": 0.48,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 5,
+  "venue": "sxbet_lines",
+  "line": "SX Bet \u00b7 Taker \u00b7 Spreads/Totals",
+  "platform": "sxbet",
+  "strategy": "taker",
+  "market": "lines",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "cd6eced0772d",
   "published": "2026-11-06T07:16:30Z",
   "sport": "itf",
