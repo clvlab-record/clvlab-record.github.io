@@ -8,18 +8,18 @@
   "start": "2026-11-07T17:30:00Z",
   "entry_price": 0.46375,
   "edge_bucket": "5-8%",
-  "clv": null,
-  "clv_basis": null,
+  "clv": 0.06335,
+  "clv_basis": "conservative",
   "repeat": false,
   "calibration": false,
-  "status": "pending",
+  "status": "ok",
   "pick_no": 6,
   "venue": "sxbet_lines",
   "line": "SX Bet \u00b7 Taker \u00b7 Spreads/Totals",
   "platform": "sxbet",
   "strategy": "taker",
   "market": "lines",
-  "clv_market": null,
+  "clv_market": -0.01617,
   "result": null
  },
  {
@@ -1423,7 +1423,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.02941,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "b7d96cbe2f36",
@@ -1446,7 +1446,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": 0.02941,
-  "result": null
+  "result": "lost"
  },
  {
   "id": "8cdae5f7e883",
