@@ -1,5 +1,28 @@
 [
  {
+  "id": "a362a091c5ed",
+  "published": "2026-11-07T15:34:13Z",
+  "sport": "cfb",
+  "game": "NC State Wolfpack vs. Duke Blue Devils",
+  "pick": "Under 51.5",
+  "start": "2026-11-07T17:30:00Z",
+  "entry_price": 0.46375,
+  "edge_bucket": "5-8%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 6,
+  "venue": "sxbet_lines",
+  "line": "SX Bet \u00b7 Taker \u00b7 Spreads/Totals",
+  "platform": "sxbet",
+  "strategy": "taker",
+  "market": "lines",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "4f503c1fec43",
   "published": "2026-11-07T13:37:50Z",
   "sport": "itf",
