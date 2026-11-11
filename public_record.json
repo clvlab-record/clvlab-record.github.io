@@ -1,5 +1,28 @@
 [
  {
+  "id": "911fc093f804",
+  "published": "2026-11-10T23:34:52Z",
+  "sport": "itf",
+  "game": "W50 Chihuahua: Valeriya Strakhova vs Julia Garcia",
+  "pick": "Julia Garcia",
+  "start": "2026-11-11T01:00:00Z",
+  "entry_price": 0.23,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 37,
+  "venue": "polymarket_hold",
+  "line": "Polymarket \u00b7 Hold \u00b7 Moneyline",
+  "platform": "polymarket",
+  "strategy": "hold",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "30ea20d3414f",
   "published": "2026-11-10T17:38:59Z",
   "sport": "itf",
