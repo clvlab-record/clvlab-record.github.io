@@ -1,5 +1,51 @@
 [
  {
+  "id": "89f918a40a11",
+  "published": "2026-11-13T14:22:54Z",
+  "sport": "itf",
+  "game": "Barbara Gatica vs. Lan Mi",
+  "pick": "Barbara Gatica",
+  "start": "2026-11-13T15:00:00Z",
+  "entry_price": 0.74,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 68,
+  "venue": "kalshi",
+  "line": "Kalshi \u00b7 Taker \u00b7 Moneyline",
+  "platform": "kalshi",
+  "strategy": "taker",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
+  "id": "3c722e71c8da",
+  "published": "2026-11-13T14:22:54Z",
+  "sport": "itf",
+  "game": "Barbara Gatica vs. Lan Mi",
+  "pick": "Barbara Gatica",
+  "start": "2026-11-13T15:00:00Z",
+  "entry_price": 0.74,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 59,
+  "venue": "kalshi_hold",
+  "line": "Kalshi \u00b7 Hold \u00b7 Moneyline",
+  "platform": "kalshi",
+  "strategy": "hold",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "fbb386eff9ac",
   "published": "2026-11-12T23:38:09Z",
   "sport": "nhl",
@@ -1929,7 +1975,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": -0.00962,
-  "result": null
+  "result": "won"
  },
  {
   "id": "887cc65a4756",
@@ -1952,7 +1998,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": -0.00962,
-  "result": null
+  "result": "won"
  },
  {
   "id": "92dd10b7839e",
@@ -1975,7 +2021,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.01639,
-  "result": null
+  "result": "won"
  },
  {
   "id": "90e1dda92eb2",
@@ -1998,7 +2044,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": 0.01639,
-  "result": null
+  "result": "won"
  },
  {
   "id": "e9b7c7935309",
@@ -2021,7 +2067,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.05833,
-  "result": null
+  "result": "won"
  },
  {
   "id": "381b7c3da714",
@@ -2044,7 +2090,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": 0.05833,
-  "result": null
+  "result": "won"
  },
  {
   "id": "9becc96223d0",
@@ -2090,7 +2136,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.02419,
-  "result": null
+  "result": "won"
  },
  {
   "id": "6bb1c24e2673",
