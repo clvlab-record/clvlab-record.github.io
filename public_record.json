@@ -1952,7 +1952,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": -0.0098,
-  "result": null
+  "result": "void"
  },
  {
   "id": "29dd6b95f966",
