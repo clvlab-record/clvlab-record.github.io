@@ -1,5 +1,28 @@
 [
  {
+  "id": "0a1607c86a7a",
+  "published": "2026-11-14T15:31:04Z",
+  "sport": "cfb",
+  "game": "Connecticut Huskies vs. James Madison Dukes",
+  "pick": "Over 57.5",
+  "start": "2026-11-14T17:00:00Z",
+  "entry_price": 0.465,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 8,
+  "venue": "sxbet_lines",
+  "line": "SX Bet \u00b7 Taker \u00b7 Spreads/Totals",
+  "platform": "sxbet",
+  "strategy": "taker",
+  "market": "lines",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "376e856d2dbc",
   "published": "2026-11-13T15:48:23Z",
   "sport": "itf",
