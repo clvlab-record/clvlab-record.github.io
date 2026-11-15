@@ -1630,7 +1630,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.20732,
-  "result": null
+  "result": "won"
  },
  {
   "id": "bbf2022c8023",
@@ -1653,7 +1653,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": 0.20732,
-  "result": null
+  "result": "won"
  },
  {
   "id": "282510c3a4af",
@@ -1676,7 +1676,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.09434,
-  "result": null
+  "result": "won"
  },
  {
   "id": "a257cbe494b0",
@@ -1699,7 +1699,7 @@
   "strategy": "hold",
   "market": "moneyline",
   "clv_market": 0.09434,
-  "result": null
+  "result": "won"
  },
  {
   "id": "23cae3bbfcd0",
