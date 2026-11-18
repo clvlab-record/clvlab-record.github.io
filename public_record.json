@@ -1,5 +1,28 @@
 [
  {
+  "id": "5b4950a8621a",
+  "published": "2026-11-18T10:58:41Z",
+  "sport": "itf",
+  "game": "W50 Funchal: Dune Vaissaud vs Ada Kumru",
+  "pick": "Ada Kumru",
+  "start": "2026-11-18T13:00:00Z",
+  "entry_price": 0.51,
+  "edge_bucket": "3-5%",
+  "clv": null,
+  "clv_basis": null,
+  "repeat": false,
+  "calibration": false,
+  "status": "pending",
+  "pick_no": 41,
+  "venue": "polymarket_hold",
+  "line": "Polymarket \u00b7 Hold \u00b7 Moneyline",
+  "platform": "polymarket",
+  "strategy": "hold",
+  "market": "moneyline",
+  "clv_market": null,
+  "result": null
+ },
+ {
   "id": "959763fb775b",
   "published": "2026-11-17T14:28:22Z",
   "sport": "itf",
