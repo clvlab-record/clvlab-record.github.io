@@ -572,7 +572,7 @@
   "strategy": "taker",
   "market": "moneyline",
   "clv_market": 0.22727,
-  "result": null
+  "result": "won"
  },
  {
   "id": "a362a091c5ed",
